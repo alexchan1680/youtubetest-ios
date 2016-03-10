@@ -3,7 +3,6 @@
 //  YoutubeTestUITests
 //
 //  Created by Alex on 10/3/2016.
-//  Copyright © 2016 StockNumSystems. All rights reserved.
 //
 
 import XCTest
