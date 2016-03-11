@@ -54,20 +54,20 @@ class YoutubeAuthManager {
      <br>You can access GTMOAuth2Authentication instance by accessing service.authorizer
      - Returns : GTMOAuth2ViewControllerTouch instance.
     */
-    func authViewControllerWithCompletionHandler(handler:(GTLServiceYouTube?, NSError?) -> Void) -> GTMOAuth2ViewControllerTouch{
+    func authViewControllerWithCompletionHandler(handler:(GTMOAuth2ViewControllerTouch, GTLServiceYouTube?, NSError?) -> Void) -> GTMOAuth2ViewControllerTouch{
         return GTMOAuth2ViewControllerTouch(
             scope: kGTLAuthScopeYouTube,
             clientID: clientID,
             clientSecret: nil,
             keychainItemName: authKeyChainName,
-            completionHandler: { (_, auth, error) -> Void in
+            completionHandler: { (vc, auth, error) -> Void in
                 guard let auth = auth where error == nil else {
-                    handler(nil, error)
+                    handler(vc, nil, error)
                     return
                 }
                 let service = GTLServiceYouTube()
                 service.authorizer = auth
-                handler(service, nil)
+                handler(vc, service, nil)
         })
     }
     

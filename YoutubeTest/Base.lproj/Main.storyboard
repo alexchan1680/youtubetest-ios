@@ -20,14 +20,30 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhZ-kr-YkX">
                                 <rect key="frame" x="279" y="285" width="42" height="30"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="loginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NWd-VX-fuX"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqr-0N-XAy">
+                                <rect key="frame" x="20" y="40" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zqr-0N-XAy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="3O0-Kd-ZIE"/>
+                            <constraint firstItem="zqr-0N-XAy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="D8g-jg-3Id"/>
                             <constraint firstItem="DhZ-kr-YkX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Dcc-dO-wym"/>
+                            <constraint firstAttribute="trailing" secondItem="zqr-0N-XAy" secondAttribute="trailing" constant="20" id="XEQ-85-q5u"/>
                             <constraint firstItem="DhZ-kr-YkX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vYp-0F-gme"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="DhZ-kr-YkX" id="Ufs-KP-Yza"/>
+                        <outlet property="userNameLabel" destination="zqr-0N-XAy" id="uxS-P6-xUd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

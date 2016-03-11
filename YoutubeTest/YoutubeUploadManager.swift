@@ -8,13 +8,8 @@
 import Foundation
 import MobileCoreServices
 
-protocol YoutubeUploadManagerDelegate : class{
-    func uploadManager(manager:YoutubeUploadManager, didFinishWithResults:GTLYouTubeVideo?)
-}
-
 class YoutubeUploadManager{
     private let service:GTLServiceYouTube
-    weak var delegate:YoutubeUploadManagerDelegate?
     
     enum Error:ErrorType{
         case NoUploadFile
